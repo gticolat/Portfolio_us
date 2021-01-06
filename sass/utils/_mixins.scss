@@ -1,0 +1,27 @@
+@mixin font-family-heading {
+    font-family: 'Source Sans Pro',
+        sans-serif;
+}
+
+@mixin font-family-text {
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+@mixin mobile-only {
+    @media screen and (min-width: 0px) and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin mobile-and-tablette {
+    @media screen and (min-width: 0px) and (max-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}

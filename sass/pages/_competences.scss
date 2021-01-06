@@ -1,0 +1,244 @@
+.heading--center {
+    text-align: center;
+}
+
+.container-rond-competences {
+    width: 80%;
+    margin: auto;
+}
+
+
+.rond-competences img {
+    width: 6rem;
+}
+
+.rond-competences a {
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+
+    @include tablette-only {
+        margin: 10px 30px;
+    }
+}
+
+@include mobile-only {
+    .rond-competences a:nth-child(2n+1) {
+        margin: 10px 30px 20px 0;
+    }
+
+    .rond-competences a:nth-child(2n) {
+        margin: 10px 0 20px 30px;
+    }
+
+    /* Temporaire le temps que JS est tout seul */
+    .rond-competences-block a:nth-child(3) {
+        margin-right: 0;
+    }
+}
+
+.rond-competences img,
+.rond-competences a {
+    display: block;
+}
+
+.rond-competences span {
+    position: relative;
+    top: 15px;
+    color: #211A1D;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
+    @include mobile-and-tablette {
+        opacity: 1;
+    }
+}
+
+.rond-competences-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+
+    @include mobile-and-tablette {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+.rond-competences-item:hover span {
+    opacity: 1;
+}
+
+.rond-competences-item {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
+    @include mobile-and-tablette {
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+    }
+}
+
+.notblur {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+
+
+
+.carte-competences-container {
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+
+    @include mobile-and-tablette {
+        width: 80%;
+    }
+}
+
+
+.carte-competence {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    @include mobile-and-tablette {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: justify;
+    }
+}
+
+.carte-competence-item1 {
+    width: 50%;
+    border-right: 1px solid #ccc;
+    padding: 0 10px 50px 0;
+
+    @include mobile-and-tablette {
+        width: 100%;
+        border: 0;
+        margin: auto;
+        padding: 0;
+    }
+}
+
+.carte-competence-item2 {
+    width: 50%;
+    padding-left: 40px;
+
+    @include mobile-and-tablette {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+}
+
+@include mobile-and-tablette {
+    .carte-competence-item2 li {
+        margin: 20px 0;
+        text-align: left;
+    }
+}
+
+.container-progression {
+    height: 10px;
+    width: 80%;
+    margin: 10px auto 30px auto;
+    background-color: rgba(235, 235, 235, 0.8);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: inset 2px 2px 5px rgba(163, 163, 163, 0.6),
+        inset -2px -2px 5px rgba(235, 235, 235, 1);
+}
+
+.progression {
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #7510F7;
+    border-radius: 20px;
+}
+
+.progression-html {
+    width: 80%;
+}
+
+.progression-css {
+    width: 70%;
+}
+
+.progression-js {
+    width: 20%;
+}
+
+.progression-php {
+    width: 10%;
+}
+
+.progression-sql {
+    width: 50%;
+}
+
+.carte-competence li {
+    list-style-type: disc;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+#carte-competence-html,
+#carte-competence-css,
+#carte-competence-js,
+#carte-competence-php,
+#carte-competence-sql {
+    display: none;
+}
+
+#carte-competence-html-afficher {
+    display: block;
+}
+
+.carte-competence-item2 .icon-thumbs-up {
+    color: #6AB547;
+    font-size: 1.8em;
+    float: left;
+}
+
+.carte-competence-item2 ul {
+    padding-left: 70px;
+    margin-bottom: 50px;
+}
+
+.carte-competence-item2 .decouvrir-projet {
+    text-align: center;
+    margin-top: 40px;
+}

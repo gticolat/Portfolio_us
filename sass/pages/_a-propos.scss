@@ -1,0 +1,319 @@
+.container_a-propos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.img_a-propos {
+    width: 60%;
+
+    @include mobile-and-tablette {
+        display: none;
+    }
+}
+
+.img_a-propos img {
+    width: 100%;
+}
+
+.container_text_a-propos {
+    width: 40%;
+    position: relative;
+
+    @include mobile-and-tablette {
+        width: 100%;
+    }
+
+    @include tablette-only {
+        padding: 50px 0;
+        background-image: url(/img/ordinateur_a_propos.jpg);
+        background-size: cover;
+    }
+}
+
+.text_a-propos {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 70px 60px 120px 60px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -140px;
+    border-radius: 5px;
+    line-height: 2em;
+    text-align: justify;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 0 5px 4px rgba(60, 60, 60, 0.2);
+    box-shadow: 0 0 5px 4px rgba(60, 60, 60, 0.2);
+
+    @include mobile-and-tablette {
+        position: static;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        text-align: justify;
+    }
+
+    @include tablette-only {
+        width: 75%;
+        padding: 60px 50px;
+    }
+
+    @include mobile-only {
+        width: 80%;
+        padding: 0;
+        -webkit-box-shadow: 0 0 0 0 #fff;
+        box-shadow: 0 0 0 0 #fff;
+    }
+}
+
+@include mobile-and-tablette {
+    .text_a-propos h2 {
+        text-align: center;
+    }
+}
+
+
+
+.lien-competence {
+    position: absolute;
+    bottom: 60px;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    @include mobile-and-tablette {
+        position: static;
+        width: 90%;
+        font-size: 0.9em;
+        margin: auto;
+    }
+}
+
+.lien-competence a {
+    color: #7510F7;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+.cercle {
+    width: 16px;
+    height: 16px;
+    background: #7510F7;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -28px;
+    right: auto;
+    z-index: 2;
+
+    @include mobile-and-tablette {
+        display: none;
+    }
+}
+
+.direction-l .cercle {
+    right: -28px;
+    left: auto;
+}
+
+
+
+.timeline {
+    position: relative;
+    padding: 0;
+    margin: 70px auto 200px auto;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    width: 660px;
+
+    @include mobile-and-tablette {
+        width: 90%;
+        margin: 0 auto 150px auto;
+    }
+}
+
+.timeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: rgb(213, 213, 213);
+    background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(213, 213, 213, 0)), color-stop(8%, rgb(213, 213, 213)), color-stop(92%, rgb(213, 213, 213)), to(rgba(213, 213, 213, 0)));
+    background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    z-index: 1;
+}
+
+.timeline li {
+    padding: 6.5em 0;
+    margin-bottom: 50px;
+
+    @include mobile-and-tablette {
+        padding: 2rem 0;
+    }
+}
+
+@include mobile-and-tablette {
+    .timeline li:first-child {
+        padding-top: 8rem;
+    }
+}
+
+
+
+
+.direction-l,
+.direction-r {
+    width: 310px;
+    text-align: center;
+
+    @include mobile-and-tablette {
+        width: auto;
+    }
+}
+
+.direction-l {
+    float: left;
+
+    @include mobile-and-tablette {
+        float: none;
+    }
+}
+
+.direction-r {
+    float: right;
+
+    @include mobile-and-tablette {
+        float: none;
+    }
+}
+
+.flag-wrapper {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.flag {
+    position: relative;
+    display: inline;
+    background: rgb(255, 255, 255);
+    font-weight: 600;
+    z-index: 2;
+    padding: 6px 10px;
+    text-align: left;
+    border-radius: 5px;
+    line-height: 2em;
+    white-space: nowrap;
+
+    @include mobile-and-tablette {
+        white-space: normal;
+        display: block;
+        width: 80%;
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
+}
+
+
+.direction-l .flag {
+    -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.direction-r .flag {
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.time-wrapper {
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: -135px;
+    right: auto;
+    margin: 4px 0 0 0;
+    z-index: 2;
+    line-height: 1em;
+    color: #fff;
+
+    @include mobile-and-tablette {
+        top: -36px;
+        left: 50% !important;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+.direction-l .time-wrapper,
+.direction-r .time-wrapper {
+    float: none;
+}
+
+.direction-l .time-wrapper {
+    left: auto;
+    right: -135px;
+
+    @include mobile-and-tablette {
+        right: auto;
+    }
+}
+
+.time {
+    background: #7510F7;
+    display: inline-block;
+    padding: 8px;
+}
+
+.desc {
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.direction-l .desc {
+    text-align: right;
+
+    @include mobile-and-tablette {
+        text-align: left;
+    }
+}
+
+.direction-l .desc,
+.direction-r .desc {
+    position: relative;
+    padding: 1em;
+    z-index: 2;
+}
